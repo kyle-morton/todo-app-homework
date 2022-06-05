@@ -14,7 +14,6 @@ public class Priority1DbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder);
     }
 
 }
