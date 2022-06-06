@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Priority1ToDo.App.Models;
+using Priority1ToDo.Core.Services.Interfaces;
 using System.Diagnostics;
 
 namespace Priority1ToDo.App.Controllers
@@ -7,14 +8,19 @@ namespace Priority1ToDo.App.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IToDoListService _toDoListService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IToDoListService toDoListService)
         {
             _logger = logger;
+            _toDoListService = toDoListService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var todoLists = await _toDoListService.GetAllAsync();
+
+
             return View();
         }
 
