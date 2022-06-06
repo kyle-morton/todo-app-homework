@@ -21,4 +21,10 @@
     <ProjectReference Include="..\Priority1ToDo.Core\Priority1ToDo.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\ToDoLists\" />
+    <Folder Include="ViewModels\ToDos\" />
+    <Folder Include="Views\ToDoLists\" />
+  </ItemGroup>
+
 </Project>

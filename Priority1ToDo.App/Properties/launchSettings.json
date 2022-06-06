@@ -1,4 +1,4 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -10,12 +10,13 @@
   "profiles": {
     "Priority1ToDo.App": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7155;http://localhost:5155",
+      "launchUrl": "https://localhost:7155/ToDos",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:7155;http://localhost:5155",
+      "dotnetRunMessages": true
     },
     "IIS Express": {
       "commandName": "IISExpress",
